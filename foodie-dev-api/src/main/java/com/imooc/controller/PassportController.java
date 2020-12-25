@@ -17,7 +17,7 @@ public class PassportController {
     @GetMapping("usernameIsExist")
     public IMOOCJSONResult usernameIsExist(@RequestParam String username){
         if(StringUtils.isBlank(username)){
-            return IMOOCJSONResult.errorMsg("用户名不能为空");
+            return IMOOCJSONResult.errorMsg("用户名不能为空");//
         }
         // 2. 查找注册的用户名是否存在
         boolean isExist = userService.queryUsernameIsExist(username);
