@@ -17,4 +17,6 @@ public interface UserService {
     public void saveChildren();
     public boolean queryUsernameIsExist(String username);
     public Users createUser(UserBO userBO) throws Exception;
+
+    Users queryUserForLogin(String username, String md5Str);
 }
